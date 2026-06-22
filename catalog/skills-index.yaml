@@ -1,5 +1,5 @@
 generated_from: skills/*/SKILL.md
-count: 53
+count: 54
 skills:
 - name: acquisition-channel-advisor
   description: Evaluate acquisition channels using unit economics, customer quality,
@@ -99,6 +99,19 @@ skills:
     \ end-to-end customer experience, identify pain points, and create a shared mental\
     \ model across teams\u2014avoiding surface-level feature lists and ensuring discovery\
     \ work focuses on real customer problems, not assumed solutions."
+- name: derisk-measurement-advisor
+  description: Identify what to measure, test, or track to de-risk a product or AI
+    idea. Use when stress-testing an idea across internal (DUFV) and external (PESTEL)
+    dimensions.
+  type: interactive
+  path: skills/derisk-measurement-advisor/SKILL.md
+  intent: "Guide product managers through a structured risk scan across **10 dimensions**\
+    \ \u2014 4 internal (Desirability, Usability, Feasibility, Viability) and 6 external\
+    \ (Political, Economic, Social, Technological, Environmental, Legal) \u2014 to\
+    \ identify the most important things to measure, test, or track before committing\
+    \ to a product or AI idea. Each surfaced risk gets triaged into **act on immediately**\
+    \ or **start tracking**, producing a prioritized risk register with concrete next\
+    \ steps."
 - name: director-readiness-advisor
   description: Guide the PM-to-Director transition across preparing, interviewing,
     landing, and recalibrating. Use when leadership scope is changing and you need
