@@ -108,6 +108,8 @@ type: component
 
 ## Purpose
 
+## Input
+
 ## Key Concepts
 
 ## Application
@@ -122,6 +124,7 @@ type: component
 ## Quality Bar
 
 - Keep language opinionated and practical.
+- In `## Input`, say what the user *can* bring in plain language, show an example invocation, and tell the agent to use input supplied inline with the request instead of re-asking for it. Frame it as an invitation, not a gate — the section must make clear that partial or zero input is fine and the skill guides the user through what's missing. Never use runtime-specific template syntax like `$ARGUMENTS` — it only expands in Claude Code and reads as noise everywhere else (Claude web, Codex, Streamlit). This is deliberate, and a differentiator: see "Why We Don't Use `$ARGUMENTS`" in `CONTRIBUTING.md`.
 - Use short paragraphs and concrete instructions.
 - Include a clear example and an explicit anti-pattern.
 - Define jargon on first use.
@@ -155,6 +158,13 @@ type: workflow
 
 ## Purpose
 Define the demo goal, anchor the story to the audience, and reduce risk before presenting.
+
+## Input
+Provide the demo you're preparing: the product or feature, the audience, and the decision at stake.
+- If you provide this inline (e.g., "prep a demo of our analytics dashboard for the CFO"), the skill uses it and skips straight to narrative design.
+- If you provide nothing, the skill opens with the intake questions in Application step 1.
+
+Example: `Use product-demo: 10-minute demo of usage-based billing to enterprise prospects, goal is pilot sign-off.`
 
 ## Key Concepts
 - Demo regret: When a demo shows features but fails to prove value.

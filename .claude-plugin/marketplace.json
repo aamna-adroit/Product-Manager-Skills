@@ -5,10 +5,93 @@
     "email": "dean.peters@productside.com"
   },
   "metadata": {
-    "description": "47 battle-tested product management skills for Claude Code — discovery, strategy, finance, career, and more.",
-    "version": "0.79.0"
+    "description": "55 battle-tested product management skills for Claude Code \u2014 discovery, strategy, finance, career, and more.",
+    "version": "0.81.0"
   },
   "plugins": [
+    {
+      "name": "acquisition-channel-advisor",
+      "source": "./skills/acquisition-channel-advisor",
+      "description": "Evaluate acquisition channels using unit economics, customer quality, and scalability.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "acquisition",
+        "unit-economics",
+        "growth"
+      ],
+      "strict": false
+    },
+    {
+      "name": "agent-orchestration-advisor",
+      "source": "./skills/agent-orchestration-advisor",
+      "description": "Design multi-agent AI workflows with clear boundaries, handoffs, and monitoring.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "ai",
+        "agents",
+        "orchestration",
+        "workflows"
+      ],
+      "strict": false
+    },
+    {
+      "name": "ai-shaped-readiness-advisor",
+      "source": "./skills/ai-shaped-readiness-advisor",
+      "description": "Assess whether your product work is AI-first or AI-shaped across 5 competencies.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "ai",
+        "readiness",
+        "assessment",
+        "competencies"
+      ],
+      "strict": false
+    },
+    {
+      "name": "altitude-horizon-framework",
+      "source": "./skills/altitude-horizon-framework",
+      "description": "Understand the PM-to-Director transition through altitude and horizon thinking.",
+      "category": "career",
+      "tags": [
+        "pm",
+        "career",
+        "director",
+        "leadership",
+        "transition"
+      ],
+      "strict": false
+    },
+    {
+      "name": "business-health-diagnostic",
+      "source": "./skills/business-health-diagnostic",
+      "description": "Diagnose SaaS business health across growth, retention, efficiency, and capital.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "saas",
+        "metrics",
+        "diagnostic"
+      ],
+      "strict": false
+    },
+    {
+      "name": "company-intel",
+      "source": "./skills/company-intel",
+      "description": "Research a company, industry, or competitor set using web search and seven analytical lenses.",
+      "category": "discovery",
+      "tags": [
+        "pm",
+        "research",
+        "competitive-analysis",
+        "market-intel"
+      ],
+      "strict": false
+    },
     {
       "name": "company-research",
       "source": "./skills/company-research",
@@ -19,6 +102,20 @@
         "research",
         "competitive-analysis",
         "interviews"
+      ],
+      "strict": false
+    },
+    {
+      "name": "context-engineering-advisor",
+      "source": "./skills/context-engineering-advisor",
+      "description": "Diagnose context stuffing vs. context engineering in AI workflows.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "ai",
+        "context-engineering",
+        "llm",
+        "prompting"
       ],
       "strict": false
     },
@@ -49,6 +146,33 @@
       "strict": false
     },
     {
+      "name": "derisk-measurement-advisor",
+      "source": "./skills/derisk-measurement-advisor",
+      "description": "Identify what to measure, test, or track to de-risk a product or AI idea.",
+      "category": "strategy",
+      "tags": [
+        "pm",
+        "risk",
+        "validation",
+        "metrics"
+      ],
+      "strict": false
+    },
+    {
+      "name": "director-readiness-advisor",
+      "source": "./skills/director-readiness-advisor",
+      "description": "Guide the PM-to-Director transition across preparing, interviewing, and landing.",
+      "category": "career",
+      "tags": [
+        "pm",
+        "career",
+        "director",
+        "coaching",
+        "transition"
+      ],
+      "strict": false
+    },
+    {
       "name": "discovery-interview-prep",
       "source": "./skills/discovery-interview-prep",
       "description": "Plan customer discovery interviews with the right goal, segment, constraints, and method.",
@@ -71,6 +195,102 @@
         "discovery",
         "validation",
         "workflow"
+      ],
+      "strict": false
+    },
+    {
+      "name": "eol-message",
+      "source": "./skills/eol-message",
+      "description": "Write a clear, empathetic EOL announcement with rationale and next steps.",
+      "category": "strategy",
+      "tags": [
+        "pm",
+        "eol",
+        "communication",
+        "sunset"
+      ],
+      "strict": false
+    },
+    {
+      "name": "epic-breakdown-advisor",
+      "source": "./skills/epic-breakdown-advisor",
+      "description": "Break down epics into user stories with Humanizing Work split patterns.",
+      "category": "delivery",
+      "tags": [
+        "pm",
+        "epics",
+        "splitting",
+        "backlog"
+      ],
+      "strict": false
+    },
+    {
+      "name": "epic-hypothesis",
+      "source": "./skills/epic-hypothesis",
+      "description": "Frame an epic as a testable hypothesis with target user, outcome, and validation.",
+      "category": "delivery",
+      "tags": [
+        "pm",
+        "epics",
+        "hypothesis",
+        "validation"
+      ],
+      "strict": false
+    },
+    {
+      "name": "executive-onboarding-playbook",
+      "source": "./skills/executive-onboarding-playbook",
+      "description": "Plan a VP or CPO 30-60-90 day diagnostic onboarding path.",
+      "category": "career",
+      "tags": [
+        "pm",
+        "career",
+        "executive",
+        "onboarding",
+        "vp",
+        "cpo"
+      ],
+      "strict": false
+    },
+    {
+      "name": "feature-investment-advisor",
+      "source": "./skills/feature-investment-advisor",
+      "description": "Evaluate feature investments using revenue impact, cost structure, ROI, and strategy.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "roi",
+        "investment",
+        "feature"
+      ],
+      "strict": false
+    },
+    {
+      "name": "finance-based-pricing-advisor",
+      "source": "./skills/finance-based-pricing-advisor",
+      "description": "Evaluate pricing changes using ARPU, conversion, churn risk, NRR, and payback.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "pricing",
+        "arpu",
+        "churn"
+      ],
+      "strict": false
+    },
+    {
+      "name": "finance-metrics-quickref",
+      "source": "./skills/finance-metrics-quickref",
+      "description": "Look up SaaS finance metrics, formulas, and benchmarks fast.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "metrics",
+        "reference",
+        "saas"
       ],
       "strict": false
     },
@@ -114,41 +334,15 @@
       "strict": false
     },
     {
-      "name": "problem-framing-canvas",
-      "source": "./skills/problem-framing-canvas",
-      "description": "Guide teams through MITRE's Problem Framing Canvas for clearer problem statements.",
-      "category": "discovery",
+      "name": "organic-growth-advisor",
+      "source": "./skills/organic-growth-advisor",
+      "description": "Identify which organic growth path to pursue \u2014 new segments, geographies, channels, or products.",
+      "category": "strategy",
       "tags": [
         "pm",
-        "problem-framing",
-        "mitre",
-        "workshop"
-      ],
-      "strict": false
-    },
-    {
-      "name": "problem-statement",
-      "source": "./skills/problem-statement",
-      "description": "Write a user-centered problem statement with who, what, why, and how it feels.",
-      "category": "discovery",
-      "tags": [
-        "pm",
-        "problem-statement",
-        "framing",
-        "empathy"
-      ],
-      "strict": false
-    },
-    {
-      "name": "proto-persona",
-      "source": "./skills/proto-persona",
-      "description": "Create a proto-persona from current research, market signals, and team knowledge.",
-      "category": "discovery",
-      "tags": [
-        "pm",
-        "persona",
-        "user-research",
-        "assumptions"
+        "growth",
+        "strategy",
+        "market-expansion"
       ],
       "strict": false
     },
@@ -162,6 +356,44 @@
         "pestel",
         "macro-environment",
         "strategy"
+      ],
+      "strict": false
+    },
+    {
+      "name": "pm-skill-creator",
+      "source": "./skills/pm-skill-creator",
+      "description": "Design a new PM skill through guided conversation.",
+      "category": "meta",
+      "tags": [
+        "pm",
+        "skill-authoring",
+        "meta"
+      ],
+      "strict": false
+    },
+    {
+      "name": "pol-probe",
+      "source": "./skills/pol-probe",
+      "description": "Define a Proof of Life probe to test a risky hypothesis cheaply.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "validation",
+        "proof-of-life",
+        "experimentation"
+      ],
+      "strict": false
+    },
+    {
+      "name": "pol-probe-advisor",
+      "source": "./skills/pol-probe-advisor",
+      "description": "Select the right Proof of Life probe type based on hypothesis, risk, and resources.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "validation",
+        "proof-of-life",
+        "advisor"
       ],
       "strict": false
     },
@@ -231,6 +463,46 @@
       "strict": false
     },
     {
+      "name": "problem-framing-canvas",
+      "source": "./skills/problem-framing-canvas",
+      "description": "Guide teams through MITRE's Problem Framing Canvas for clearer problem statements.",
+      "category": "discovery",
+      "tags": [
+        "pm",
+        "problem-framing",
+        "mitre",
+        "workshop"
+      ],
+      "strict": false
+    },
+    {
+      "name": "problem-statement",
+      "source": "./skills/problem-statement",
+      "description": "Write a user-centered problem statement with who, what, why, and how it feels.",
+      "category": "discovery",
+      "tags": [
+        "pm",
+        "problem-statement",
+        "framing",
+        "empathy"
+      ],
+      "strict": false
+    },
+    {
+      "name": "product-sense-interview-answer",
+      "source": "./skills/product-sense-interview-answer",
+      "description": "Structure a spoken product-sense interview answer with segmentation and MVP tradeoffs.",
+      "category": "career",
+      "tags": [
+        "pm",
+        "career",
+        "interview",
+        "product-sense",
+        "product-design"
+      ],
+      "strict": false
+    },
+    {
       "name": "product-strategy-session",
       "source": "./skills/product-strategy-session",
       "description": "Run an end-to-end product strategy session across positioning, discovery, and roadmap.",
@@ -240,6 +512,33 @@
         "strategy",
         "workshop",
         "workflow"
+      ],
+      "strict": false
+    },
+    {
+      "name": "proto-persona",
+      "source": "./skills/proto-persona",
+      "description": "Create a proto-persona from current research, market signals, and team knowledge.",
+      "category": "discovery",
+      "tags": [
+        "pm",
+        "persona",
+        "user-research",
+        "assumptions"
+      ],
+      "strict": false
+    },
+    {
+      "name": "recommendation-canvas",
+      "source": "./skills/recommendation-canvas",
+      "description": "Evaluate an AI product idea across outcomes, hypotheses, risks, and positioning.",
+      "category": "ai",
+      "tags": [
+        "pm",
+        "ai",
+        "evaluation",
+        "canvas",
+        "recommendation"
       ],
       "strict": false
     },
@@ -257,54 +556,82 @@
       "strict": false
     },
     {
-      "name": "tam-sam-som-calculator",
-      "source": "./skills/tam-sam-som-calculator",
-      "description": "Calculate TAM, SAM, and SOM with explicit assumptions, methods, and caveats.",
-      "category": "strategy",
+      "name": "saas-economics-efficiency-metrics",
+      "source": "./skills/saas-economics-efficiency-metrics",
+      "description": "Evaluate SaaS unit economics and capital efficiency for scaling decisions.",
+      "category": "finance",
       "tags": [
         "pm",
-        "market-sizing",
-        "tam",
-        "business-case"
+        "finance",
+        "unit-economics",
+        "efficiency",
+        "saas"
       ],
       "strict": false
     },
     {
-      "name": "eol-message",
-      "source": "./skills/eol-message",
-      "description": "Write a clear, empathetic EOL announcement with rationale and next steps.",
+      "name": "saas-revenue-growth-metrics",
+      "source": "./skills/saas-revenue-growth-metrics",
+      "description": "Calculate SaaS revenue, retention, and growth metrics for momentum diagnosis.",
+      "category": "finance",
+      "tags": [
+        "pm",
+        "finance",
+        "revenue",
+        "retention",
+        "growth"
+      ],
+      "strict": false
+    },
+    {
+      "name": "skill-authoring-workflow",
+      "source": "./skills/skill-authoring-workflow",
+      "description": "Turn raw PM content into a compliant, publish-ready skill.",
+      "category": "meta",
+      "tags": [
+        "pm",
+        "skill-authoring",
+        "contributor",
+        "workflow"
+      ],
+      "strict": false
+    },
+    {
+      "name": "stakeholder-engagement-advisor",
+      "source": "./skills/stakeholder-engagement-advisor",
+      "description": "Plan engagement for a specific stakeholder.",
       "category": "strategy",
       "tags": [
         "pm",
-        "eol",
+        "stakeholders",
         "communication",
-        "sunset"
+        "alignment"
       ],
       "strict": false
     },
     {
-      "name": "epic-breakdown-advisor",
-      "source": "./skills/epic-breakdown-advisor",
-      "description": "Break down epics into user stories with Humanizing Work split patterns.",
-      "category": "delivery",
+      "name": "stakeholder-identification",
+      "source": "./skills/stakeholder-identification",
+      "description": "Map every stakeholder before engaging anyone.",
+      "category": "strategy",
       "tags": [
         "pm",
-        "epics",
-        "splitting",
-        "backlog"
+        "stakeholders",
+        "equity",
+        "discovery"
       ],
       "strict": false
     },
     {
-      "name": "epic-hypothesis",
-      "source": "./skills/epic-hypothesis",
-      "description": "Frame an epic as a testable hypothesis with target user, outcome, and validation.",
-      "category": "delivery",
+      "name": "stakeholder-mapping",
+      "source": "./skills/stakeholder-mapping",
+      "description": "Prioritize stakeholders using two complementary grids.",
+      "category": "strategy",
       "tags": [
         "pm",
-        "epics",
-        "hypothesis",
-        "validation"
+        "stakeholders",
+        "prioritization",
+        "alignment"
       ],
       "strict": false
     },
@@ -318,6 +645,19 @@
         "storyboard",
         "narrative",
         "ux"
+      ],
+      "strict": false
+    },
+    {
+      "name": "tam-sam-som-calculator",
+      "source": "./skills/tam-sam-som-calculator",
+      "description": "Calculate TAM, SAM, and SOM with explicit assumptions, methods, and caveats.",
+      "category": "strategy",
+      "tags": [
+        "pm",
+        "market-sizing",
+        "tam",
+        "business-case"
       ],
       "strict": false
     },
@@ -374,161 +714,6 @@
       "strict": false
     },
     {
-      "name": "acquisition-channel-advisor",
-      "source": "./skills/acquisition-channel-advisor",
-      "description": "Evaluate acquisition channels using unit economics, customer quality, and scalability.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "acquisition",
-        "unit-economics",
-        "growth"
-      ],
-      "strict": false
-    },
-    {
-      "name": "business-health-diagnostic",
-      "source": "./skills/business-health-diagnostic",
-      "description": "Diagnose SaaS business health across growth, retention, efficiency, and capital.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "saas",
-        "metrics",
-        "diagnostic"
-      ],
-      "strict": false
-    },
-    {
-      "name": "feature-investment-advisor",
-      "source": "./skills/feature-investment-advisor",
-      "description": "Evaluate feature investments using revenue impact, cost structure, ROI, and strategy.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "roi",
-        "investment",
-        "feature"
-      ],
-      "strict": false
-    },
-    {
-      "name": "finance-based-pricing-advisor",
-      "source": "./skills/finance-based-pricing-advisor",
-      "description": "Evaluate pricing changes using ARPU, conversion, churn risk, NRR, and payback.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "pricing",
-        "arpu",
-        "churn"
-      ],
-      "strict": false
-    },
-    {
-      "name": "finance-metrics-quickref",
-      "source": "./skills/finance-metrics-quickref",
-      "description": "Look up SaaS finance metrics, formulas, and benchmarks fast.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "metrics",
-        "reference",
-        "saas"
-      ],
-      "strict": false
-    },
-    {
-      "name": "saas-economics-efficiency-metrics",
-      "source": "./skills/saas-economics-efficiency-metrics",
-      "description": "Evaluate SaaS unit economics and capital efficiency for scaling decisions.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "unit-economics",
-        "efficiency",
-        "saas"
-      ],
-      "strict": false
-    },
-    {
-      "name": "saas-revenue-growth-metrics",
-      "source": "./skills/saas-revenue-growth-metrics",
-      "description": "Calculate SaaS revenue, retention, and growth metrics for momentum diagnosis.",
-      "category": "finance",
-      "tags": [
-        "pm",
-        "finance",
-        "revenue",
-        "retention",
-        "growth"
-      ],
-      "strict": false
-    },
-    {
-      "name": "altitude-horizon-framework",
-      "source": "./skills/altitude-horizon-framework",
-      "description": "Understand the PM-to-Director transition through altitude and horizon thinking.",
-      "category": "career",
-      "tags": [
-        "pm",
-        "career",
-        "director",
-        "leadership",
-        "transition"
-      ],
-      "strict": false
-    },
-    {
-      "name": "director-readiness-advisor",
-      "source": "./skills/director-readiness-advisor",
-      "description": "Guide the PM-to-Director transition across preparing, interviewing, and landing.",
-      "category": "career",
-      "tags": [
-        "pm",
-        "career",
-        "director",
-        "coaching",
-        "transition"
-      ],
-      "strict": false
-    },
-    {
-      "name": "executive-onboarding-playbook",
-      "source": "./skills/executive-onboarding-playbook",
-      "description": "Plan a VP or CPO 30-60-90 day diagnostic onboarding path.",
-      "category": "career",
-      "tags": [
-        "pm",
-        "career",
-        "executive",
-        "onboarding",
-        "vp",
-        "cpo"
-      ],
-      "strict": false
-    },
-    {
-      "name": "product-sense-interview-answer",
-      "source": "./skills/product-sense-interview-answer",
-      "description": "Structure a spoken product-sense interview answer with segmentation and MVP tradeoffs.",
-      "category": "career",
-      "tags": [
-        "pm",
-        "career",
-        "interview",
-        "product-sense",
-        "product-design"
-      ],
-      "strict": false
-    },
-    {
       "name": "vp-cpo-readiness-advisor",
       "source": "./skills/vp-cpo-readiness-advisor",
       "description": "Guide the transition to VP or CPO across preparing, interviewing, and recalibrating.",
@@ -544,74 +729,6 @@
       "strict": false
     },
     {
-      "name": "ai-shaped-readiness-advisor",
-      "source": "./skills/ai-shaped-readiness-advisor",
-      "description": "Assess whether your product work is AI-first or AI-shaped across 5 competencies.",
-      "category": "ai",
-      "tags": [
-        "pm",
-        "ai",
-        "readiness",
-        "assessment",
-        "competencies"
-      ],
-      "strict": false
-    },
-    {
-      "name": "context-engineering-advisor",
-      "source": "./skills/context-engineering-advisor",
-      "description": "Diagnose context stuffing vs. context engineering in AI workflows.",
-      "category": "ai",
-      "tags": [
-        "pm",
-        "ai",
-        "context-engineering",
-        "llm",
-        "prompting"
-      ],
-      "strict": false
-    },
-    {
-      "name": "pol-probe",
-      "source": "./skills/pol-probe",
-      "description": "Define a Proof of Life probe to test a risky hypothesis cheaply.",
-      "category": "ai",
-      "tags": [
-        "pm",
-        "validation",
-        "proof-of-life",
-        "experimentation"
-      ],
-      "strict": false
-    },
-    {
-      "name": "pol-probe-advisor",
-      "source": "./skills/pol-probe-advisor",
-      "description": "Select the right Proof of Life probe type based on hypothesis, risk, and resources.",
-      "category": "ai",
-      "tags": [
-        "pm",
-        "validation",
-        "proof-of-life",
-        "advisor"
-      ],
-      "strict": false
-    },
-    {
-      "name": "recommendation-canvas",
-      "source": "./skills/recommendation-canvas",
-      "description": "Evaluate an AI product idea across outcomes, hypotheses, risks, and positioning.",
-      "category": "ai",
-      "tags": [
-        "pm",
-        "ai",
-        "evaluation",
-        "canvas",
-        "recommendation"
-      ],
-      "strict": false
-    },
-    {
       "name": "workshop-facilitation",
       "source": "./skills/workshop-facilitation",
       "description": "Facilitate workshop sessions with consistent pacing, options, and progress tracking.",
@@ -621,19 +738,6 @@
         "facilitation",
         "workshop",
         "interactive"
-      ],
-      "strict": false
-    },
-    {
-      "name": "skill-authoring-workflow",
-      "source": "./skills/skill-authoring-workflow",
-      "description": "Turn raw PM content into a compliant, publish-ready skill.",
-      "category": "meta",
-      "tags": [
-        "pm",
-        "skill-authoring",
-        "contributor",
-        "workflow"
       ],
       "strict": false
     }

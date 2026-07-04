@@ -89,6 +89,25 @@ Common downloads:
 
 ## 📣 Updates & Announcements
 
+### July 4, 2026 — v0.81 Every Skill Now Declares Its Inputs (and Why We Don't Use `$ARGUMENTS`)
+
+This release closes a gap and names a differentiator in the same move. The gap: no skill told you what context to bring, or what would happen to context you supplied up front. The differentiator: other skill libraries close that gap with Claude Code's `$ARGUMENTS` templating — we deliberately don't, because the syntax only expands in Claude Code (it renders as literal noise in Claude Desktop/Web, Codex, and the Streamlit playground) and because a plain-language Input section teaches the human reader what a well-formed request looks like, which template syntax never will.
+
+**What changed in v0.81:**
+- Added a required `## Input` section to all 55 skills — what each skill works best with, what else sharpens the output, and what happens when you arrive with nothing ("Arriving empty-handed? That works too" — invitation, not gate)
+- Added the inline-input rule everywhere: context supplied with the invocation counts as answers already given; skills use it and skip what it covers instead of re-asking
+- Added `argument-hint` frontmatter to 53 skills for Claude Code autocomplete (ignored harmlessly by other runtimes)
+- Added "Why We Don't Use `$ARGUMENTS`" to CONTRIBUTING.md Design Philosophy; `check-skill-metadata.py` now fails any skill body containing bare `$ARGUMENTS`, and smoke checks warn on Input sections missing an example invocation or the empty-handed fallback
+- Added a "What to bring (all optional)" pre-flight expander to every Streamlit skill page, rendering the skill's own Input section
+- Added `workshop-facilitation/examples/inline-input-flow.md` — a full transcript of inline input skipping answered questions, with honest progress labels and the re-asking anti-pattern
+- Updated skill anatomy across CLAUDE.md, CONTRIBUTING.md, AGENTS.md, README.md, authoring scripts, adapters, and both authoring meta-skills: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References
+- Restored `skills/agent-orchestration-advisor/` (Interactive) — the Phase 6 multi-agent workflow design skill had only ever existed on an orphaned commit that never reached main, despite being referenced by README and CLAUDE.md since February; recovered from git history and upgraded to current standards (trigger description, `intent`, theme metadata, Input section)
+- Synced `.claude-plugin/marketplace.json` with the library (47 → 55 entries; it had lagged since v0.79) and bumped plugin manifest versions to 0.81
+
+Release note: [`docs/announcements/2026-07-04-v0-81-input-sections.md`](announcements/2026-07-04-v0-81-input-sections.md)
+
+---
+
 ### June 19, 2026 — v0.80 Stakeholder Suite: Three Skills from the MITRE Innovation Toolkit
 
 Stakeholder work has been a gap in this library since day one. Every PM knows they should be doing it better — mapping who matters, understanding who's being underserved, planning engagement before the room gets political. And yet most of us default to a five-minute brainstorm that reliably captures the executives and misses the frontline users whose daily work the product will change.

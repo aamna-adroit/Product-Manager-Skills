@@ -18,7 +18,7 @@ If this is your first time here, read [`Using PM Skills 101.md`](Using%20PM%20Sk
 
 ```text
 Use uploaded skill files as operating standards.
-Follow sections in order: Purpose, Key Concepts, Application, Examples, Common Pitfalls, References.
+Follow sections in order: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References.
 Ask up to 3 clarifying questions when context is missing.
 ```
 

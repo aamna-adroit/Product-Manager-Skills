@@ -76,7 +76,7 @@ Use this for project-scoped work where you want files, chats, and instructions g
 
 ```text
 When solving PM tasks, use the uploaded skill files as the operating standard.
-Follow each skill's sections in order: Purpose, Key Concepts, Application, Examples, Common Pitfalls, References.
+Follow each skill's sections in order: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References.
 If context is missing, ask up to 3 clarifying questions before drafting.
 ```
 

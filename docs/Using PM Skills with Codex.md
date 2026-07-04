@@ -158,7 +158,7 @@ You can also browse on [skills.sh](https://skills.sh/) and copy the command from
 
 - **Codex cannot find the file**: confirm repo/branch selection and exact case-sensitive path.
 - **Output is generic**: provide real constraints (stage, KPI target, customer segment, timeline).
-- **Format drift**: explicitly instruct Codex to follow `Purpose, Key Concepts, Application, Examples, Common Pitfalls, References`.
+- **Format drift**: explicitly instruct Codex to follow `Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References`.
 
 ---
 

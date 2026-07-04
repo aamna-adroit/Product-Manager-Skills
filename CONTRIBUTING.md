@@ -20,6 +20,16 @@ Every skill should:
 
 **The most common contribution mistake:** trimming explanation to tighten copy. Brevity that strips learning scaffolding is a defect, not an improvement. If you're shortening a skill, check that you're cutting fluff — not cutting the lesson.
 
+### Why We Don't Use `$ARGUMENTS`
+
+Other skill libraries lean on Claude Code's `$ARGUMENTS` substitution to accept input. We deliberately don't — and it's a differentiator, not an omission:
+
+1. **Portability.** Substitution only happens in Claude Code. In the Claude Desktop/Web packs, Codex, and the Streamlit playground, `$ARGUMENTS` renders as literal, unexplained template syntax — broken scaffolding in front of the reader.
+2. **Pedagogy.** These skills teach human PMs as much as they instruct agents. A plain-language `## Input` section shows a PM what a well-formed request looks like — and, just as important, tells them they can arrive with nothing and be walked through it. `$ARGUMENTS` teaches them nothing.
+3. **It's unnecessary.** Claude Code already appends typed arguments to the skill content when you invoke `/skill-name your context`. A skill that says "treat inline input as answers already given" gets the same behavior on every runtime, without the syntax.
+
+Every skill declares its inputs in a required `## Input` section instead — that's the contract, on every runtime. Input sections are invitations, not gates: they must make clear that partial or zero input is fine and the guided flow (Guided / Context dump / Best guess entry modes) covers whatever's missing. PRs that "modernize" skills by introducing `$ARGUMENTS` or other runtime-specific template syntax will be asked to convert to the `## Input` convention — and `scripts/check-skill-metadata.py` fails any skill body containing bare `$ARGUMENTS`, so validation catches it before review does. (The `argument-hint` frontmatter field is the one sanctioned exception — it powers Claude Code autocomplete and is ignored everywhere else.)
+
 ---
 
 ## 🎯 Who Can Contribute?
@@ -264,6 +274,14 @@ type: component
 One paragraph: What this skill does and when to use it.
 (Make it outcome-focused: "build a roadmap that survives exec review," not "learn about roadmaps")
 
+## Input
+What the user can bring, in plain language — no template syntax (see "Why We Don't Use `$ARGUMENTS`" above). Frame it as an invitation, not a gate: nothing here is a prerequisite.
+- **Works best with:** The subject the skill operates on (e.g., "the feature or problem you're writing a story for")
+- **Also useful:** Context that sharpens the output (constraints, audience, prior research)
+- **Inline input rule:** Tell the agent that anything supplied with the invocation (text after the skill name, a pasted context dump, or an appended `ARGUMENTS:` line) counts as answers already given — use it, don't re-ask
+- **Arriving empty-handed?** Say what the skill does instead — open with the first guided question, offer entry modes, etc. The reader must finish this section knowing the skill will walk them through what they don't have
+- Include 1–2 example invocations so humans learn what a well-formed request looks like
+
 ## Key Concepts
 Core frameworks, definitions, mental models.
 - Use bullets or tables
@@ -299,6 +317,7 @@ What to avoid and why.
 
 **Non-negotiable sections:**
 - Purpose
+- Input
 - Key Concepts
 - Application
 - Examples
@@ -320,6 +339,7 @@ Your skill should pass these checks:
 - [ ] **Agent-ready:** Could an AI read this and apply it without asking clarifying questions?
 - [ ] **Self-contained:** Does it define its own terms? (No unexplained jargon)
 - [ ] **Practical:** Does it include at least one concrete example?
+- [ ] **Input-aware:** Does the Input section show an example invocation, tell the agent to use inline input instead of re-asking, and make clear the user can arrive with nothing and be guided through it? (Invitation, not gate — and no `$ARGUMENTS` syntax.)
 - [ ] **Opinionated:** Does it take a stance? (Not just "here are options")
 - [ ] **Skimmable:** Can you skim the headings and bullets and get 80% of the value?
 - [ ] **Zero fluff:** Did you cut every word that doesn't earn its keep? (But not the lesson — see Design Philosophy above)

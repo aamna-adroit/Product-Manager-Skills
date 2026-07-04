@@ -1442,6 +1442,12 @@ def render_skill_detail(skill: dict, theme_slug: str | None):
             "Work through them in sequence, or jump to the phase you need."
         )
 
+    # What to bring — the skill's own Input section. Optional by design:
+    # arriving empty-handed is fine, the guided flow covers the gaps.
+    if skill["sections"].get("Input"):
+        with st.expander("🎒 What to bring (all optional — the skill walks you through the rest)"):
+            st.markdown(skill["sections"]["Input"])
+
     # Scenario input
     st.markdown("### Your scenario")
 

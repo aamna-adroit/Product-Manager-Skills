@@ -9,7 +9,10 @@ Checks:
 - type present and one of: component, interactive, workflow
 - folder name matches frontmatter name
 - required sections exist in order:
-  Purpose, Key Concepts, Application, Examples, Common Pitfalls, References
+  Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References
+- no $ARGUMENTS template syntax in the body (outside code formatting) — skills
+  declare inputs in plain language via the Input section; see CONTRIBUTING.md
+  "Why We Don't Use $ARGUMENTS"
 """
 
 from __future__ import annotations
@@ -38,6 +41,7 @@ class Issue:
 VALID_TYPES = {"component", "interactive", "workflow"}
 REQUIRED_SECTIONS = [
     "Purpose",
+    "Input",
     "Key Concepts",
     "Application",
     "Examples",
@@ -45,6 +49,25 @@ REQUIRED_SECTIONS = [
     "References",
 ]
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+FORBIDDEN_TEMPLATE_PATTERN = re.compile(r"\$ARGUMENTS\b")
+
+
+def check_forbidden_template_syntax(path: str, body: str) -> list[Issue]:
+    # Mentions inside code formatting (e.g., the authoring skills naming the
+    # anti-pattern as `$ARGUMENTS`) are allowed; bare usage is not.
+    prose = re.sub(r"```.*?```", "", body, flags=re.S)
+    prose = re.sub(r"`[^`\n]*`", "", prose)
+    if FORBIDDEN_TEMPLATE_PATTERN.search(prose):
+        return [
+            Issue(
+                path,
+                "template_syntax_forbidden",
+                "$ARGUMENTS does not expand outside Claude Code; declare inputs "
+                'in the Input section instead (CONTRIBUTING.md, "Why We Don\'t '
+                'Use $ARGUMENTS")',
+            )
+        ]
+    return []
 
 
 def split_frontmatter(text: str) -> tuple[dict | None, str]:
@@ -129,6 +152,7 @@ def check_skill(path: str) -> list[Issue]:
         issues.append(Issue(path, "folder_name_mismatch", f"folder={folder} name={name}"))
 
     issues.extend(check_required_sections(path, body))
+    issues.extend(check_forbidden_template_syntax(path, body))
     return issues
 
 

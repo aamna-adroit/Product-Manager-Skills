@@ -101,7 +101,7 @@ Create a detailed implementation plan based on this analysis.
 Include:
 1) exact file paths
 2) frontmatter (name, description, intent, type)
-3) section outline: Purpose, Key Concepts, Application, Examples, Common Pitfalls, References
+3) section outline: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References
 4) supporting files (examples/template)
 5) documentation updates needed
 

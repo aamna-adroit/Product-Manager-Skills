@@ -4,6 +4,8 @@ Canonical location for launch posts, social copy, and release-related announceme
 
 ## Latest
 
+- **2026-07-04:** [v0.81 Every Skill Now Declares Its Inputs (and Why We Don't Use `$ARGUMENTS`)](2026-07-04-v0-81-input-sections.md)
+- **2026-05-15:** [v0.79 Community Contributions: Thank You](2026-05-15-v0-79-community-contributions.md)
 - **2026-04-26:** [v0.78 Release Packaging: One Download, Then Better PM Work](2026-04-26-v0-78-release-packaging.md)
 - **2026-03-17:** [v0.75 Pedagogic-First: Restoring What This Repo Is Actually For](2026-03-17-v0-75-pedagogic-first.md)
 - **2026-03-09:** [v0.7 Sharper Skills, Faster Discovery](2026-03-09-v0-7-skill-quality-trigger-clarity.md)
@@ -16,6 +18,8 @@ Canonical location for launch posts, social copy, and release-related announceme
 
 ## Timeline
 
+- [2026-07-04-v0-81-input-sections.md](2026-07-04-v0-81-input-sections.md) — v0.81 release note for the required `## Input` section across all 55 skills, the inline-input rule, the "Why We Don't Use `$ARGUMENTS`" differentiator with validator enforcement, Streamlit "What to bring" pre-flight, and the inline-input example flow
+- [2026-05-15-v0-79-community-contributions.md](2026-05-15-v0-79-community-contributions.md) — v0.79 release note for community contributions: pm-skill-creator, plugin.json discovery fix, and script security hardening
 - [2026-04-26-v0-78-release-packaging.md](2026-04-26-v0-78-release-packaging.md) — v0.78 release note for one-command packaging, Claude Desktop/Web ZIP packs, Codex `.agents/skills`, GitHub Release automation, and clearer install paths
 - [2026-03-17-v0-75-pedagogic-first.md](2026-03-17-v0-75-pedagogic-first.md) — v0.75 release note restoring pedagogic-first philosophy and ABC (Always Be Coaching) across CONTRIBUTING, CLAUDE, AGENTS, and README; includes LinkedIn blurb
 - [2026-03-09-v0-7-skill-quality-trigger-clarity.md](2026-03-09-v0-7-skill-quality-trigger-clarity.md) — v0.7 release note for trigger-oriented metadata, `intent`, higher validation standards, better skill discovery, and the new Streamlit `Find My Skill` mode

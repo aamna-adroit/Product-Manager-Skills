@@ -209,7 +209,7 @@ If you want deeper tool/repo integrations (instead of ZIP upload workflows), use
 - Reference the "Examples" section of the skill explicitly
 
 **Claude doesn't follow the skill format**:
-- Remind it: "Follow the skill structure: Purpose, Key Concepts, Application, Examples, Common Pitfalls"
+- Remind it: "Follow the skill structure: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls"
 
 ---
 
@@ -389,7 +389,7 @@ End-to-end processes. Use when running a complete PM cycle.
 ## Need Help?
 
 - **README**: See the main [README.md](../README.md) for full skill catalog
-- **Skill Structure**: Each skill has Purpose, Key Concepts, Application, Examples, Common Pitfalls, References
+- **Skill Structure**: Each skill has Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References
 - **CLAUDE.md**: See [CLAUDE.md](../CLAUDE.md) for skill design philosophy
 - **Issues**: Report problems at [GitHub Issues](https://github.com/deanpeters/Product-Manager-Skills/issues)
 

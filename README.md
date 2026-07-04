@@ -2,7 +2,7 @@
 
 # Product Manager Skills
 
-![GitHub stars](https://img.shields.io/github/stars/deanpeters/Product-Manager-Skills?style=flat-square) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md) [![Version](https://img.shields.io/badge/version-v0.80-blue?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/releases/latest) [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-5C4EE5?style=flat-square)](https://code.claude.com/docs/en/plugin-marketplaces) ![Skills](https://img.shields.io/badge/skills-52-informational?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/deanpeters/Product-Manager-Skills?style=flat-square) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey?style=flat-square)](LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md) [![Version](https://img.shields.io/badge/version-v0.81-blue?style=flat-square)](https://github.com/deanpeters/Product-Manager-Skills/releases/latest) [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin%20Marketplace-5C4EE5?style=flat-square)](https://code.claude.com/docs/en/plugin-marketplaces) ![Skills](https://img.shields.io/badge/skills-55-informational?style=flat-square)
 
 ```text
 ╔════════════════════════════════════════════════════════════════════╗
@@ -14,14 +14,14 @@
 ║   ██║     ██║ ╚═╝ ██║    ███████║██║  ██╗██║███████╗███████╗███████║
 ║   ╚═╝     ╚═╝     ╚═╝    ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝
 ║                                                                    ║
-║   52 battle-tested skills + 6 command workflows                    ║
+║   55 battle-tested skills + 6 command workflows                    ║
 ║   Claude Code • Cursor • Codex  • n8n • OpenClaw • and more ...    ║
 ║                                                                    ║
-║   v0.80 • June 19, 2026 • CC BY-NC-SA 4.0                          ║
+║   v0.81 • July 4, 2026 • CC BY-NC-SA 4.0                           ║
 ╚════════════════════════════════════════════════════════════════════╝
 ```
 
-**52 battle-tested PM frameworks, ready for Claude, Codex, ChatGPT, and any agent that can read structured knowledge.**
+**55 battle-tested PM frameworks, ready for Claude, Codex, ChatGPT, and any agent that can read structured knowledge.**
 
 ---
 
@@ -180,6 +180,7 @@ Every `SKILL.md` follows the same structure:
 |---|---|
 | **Frontmatter** | `name`, `description`, `type`, `intent`, `best_for`, `scenarios` |
 | **Purpose** | What this skill does and when to reach for it |
+| **Input** | What you *can* bring (with example invocations) — inline input is used, not re-asked, and arriving empty-handed is fine: the skill walks you through it |
 | **Key Concepts** | Frameworks, definitions, anti-patterns — with vocabulary explained |
 | **Application** | Step-by-step instructions an agent (or human) can follow |
 | **Examples** | Real-world cases showing both good and bad versions |
@@ -187,6 +188,8 @@ Every `SKILL.md` follows the same structure:
 | **References** | Related skills and external frameworks |
 
 The `best_for` frontmatter field lists 3-5 specific scenarios where the skill is most useful — helpful for quickly scanning whether a skill fits your situation.
+
+**Why no `$ARGUMENTS` templating?** Other skill libraries use Claude Code's `$ARGUMENTS` substitution for input. We deliberately don't: it only expands in Claude Code (it renders as literal syntax in Claude Desktop/Web, Codex, and the Streamlit playground), and it teaches the human reader nothing. Instead, every skill has a plain-language `## Input` section that works on every runtime — and makes clear you can show up with full context, partial context, or nothing at all and be guided through the rest. Full rationale in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -216,6 +219,13 @@ See [docs/Platform Guides for PMs.md](docs/Platform%20Guides%20for%20PMs.md) for
 
 ## What's New
 
+**v0.81 — July 4, 2026**
+- Every skill now has a required `## Input` section: what to bring, what happens to context you supply up front (it's used, not re-asked), and reassurance that arriving empty-handed is fine — the guided flow covers the rest
+- Added `argument-hint` autocomplete for Claude Code users; deliberately **no** `$ARGUMENTS` templating — it breaks on every other runtime and teaches the reader nothing ([why](CONTRIBUTING.md))
+- Validator now enforces the convention: skills fail without an Input section or with bare `$ARGUMENTS` in the body
+- Streamlit playground shows each skill's "What to bring (all optional)" before you start a session
+- Restored `agent-orchestration-advisor` (Interactive) — the multi-agent workflow design skill was referenced everywhere but only existed on an orphaned commit; recovered from git history and brought up to current standards
+
 **v0.80 — June 19, 2026**
 - Added `stakeholder-identification` (Component) — comprehensive stakeholder brainstorm using allies/audiences/influencers, R/P/D marking, equity lens, and bias check; narrows to priority targets
 - Added `stakeholder-mapping` (Component) — two complementary grids (Power × Interest + Impact × Power); comparing outputs reveals who you're under-engaging relative to how much the product affects them
@@ -228,12 +238,6 @@ All three adapted from the [MITRE Innovation Toolkit](https://itk.mitre.org) via
 - Added `pm-skill-creator` — interactive skill for designing repo-compliant skills via guided conversation
 - Fixed missing `.claude-plugin/plugin.json` that silently blocked Claude Code skill discovery
 - Added configurable input length guard (`PM_MAX_INPUT`) and path traversal protection to helper scripts
-
-**v0.78 — April 26, 2026**
-- Added one-command release packaging: `./scripts/build-release.sh`
-- Added themed ZIP packs for Claude Desktop/Web (starter, discovery, strategy, delivery, AI PM, all-skills)
-- Added Codex ZIP with `.agents/skills` and `AGENTS.md`
-- Added GitHub Actions to build and publish release artifacts on `v*` tags
 
 → [Full changelog](docs/CHANGELOG.md)
 

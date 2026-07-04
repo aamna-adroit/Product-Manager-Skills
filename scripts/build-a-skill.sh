@@ -226,6 +226,7 @@ collect_sections() {
     echo "Tip: write draft content quickly; you can edit files after generation."
 
     SECTION_PURPOSE="$(read_multiline_required "Purpose" "What this skill does, when to use it, and expected outcome.")"
+    SECTION_INPUT="$(read_multiline_required "Input" "What the user can bring (subject, optional context), how inline input is used instead of re-asked, and what the skill does when they arrive empty-handed. Invitation, not gate; no \$ARGUMENTS syntax.")"
     SECTION_KEY_CONCEPTS="$(read_multiline_required "Key Concepts" "Core ideas, definitions, and non-obvious principles.")"
     SECTION_APPLICATION="$(read_multiline_required "Application" "How to run this skill step-by-step in practice.")"
     SECTION_EXAMPLES="$(read_multiline_required "Examples" "At least one concrete example.")"
@@ -313,6 +314,10 @@ write_skill_files() {
         echo "## Purpose"
         echo
         printf "%s\n" "$SECTION_PURPOSE"
+        echo
+        echo "## Input"
+        echo
+        printf "%s\n" "$SECTION_INPUT"
         echo
         echo "## Key Concepts"
         echo

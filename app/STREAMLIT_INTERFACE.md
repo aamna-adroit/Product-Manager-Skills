@@ -135,6 +135,7 @@ This mode is intentionally aligned with the repo's stronger trigger metadata sta
 
 **Interactive skills in advanced mode** (multi-turn chat):
 - Pre-flight info box shown before session starts (sets expectations, names the bail path)
+- "What to bring" expander on every skill detail page renders the skill's own `## Input` section (v0.81+) — shows what context sharpens the session while making explicit that arriving empty-handed is fine; the guided flow covers the gaps
 - First user message auto-sent on session start; Claude opens with the skill's Step 0
 - Progress indicator parses `Q1/3` / `Context Q2/3` / `Step N of M` patterns from assistant messages
 - `st.chat_input` for freeform responses; typing `done`, `bail`, `exit`, or `quit` ends the session gracefully

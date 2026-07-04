@@ -132,7 +132,7 @@ Based on your analysis, create a detailed implementation plan.
 Include:
 1. File structure — Exact paths (skills/skill-name/SKILL.md, etc.)
 2. YAML frontmatter — name, description, intent, type
-3. Section outline — Purpose, Key Concepts, Application, etc.
+3. Section outline — Purpose, Input, Key Concepts, Application, etc.
 4. Supporting files — templates, examples
 5. Documentation updates — CLAUDE.md, README.md changes
 

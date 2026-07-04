@@ -185,12 +185,23 @@ run_smoke_checks() {
     local smoke_fail=0
     local smoke_warn=0
 
-    for section in "Purpose" "Key Concepts" "Application" "Examples" "Common Pitfalls" "References"; do
+    for section in "Purpose" "Input" "Key Concepts" "Application" "Examples" "Common Pitfalls" "References"; do
         if ! section_has_content "$file" "$section"; then
             echo "    FAIL smoke: section '$section' is empty"
             smoke_fail=$((smoke_fail + 1))
         fi
     done
+
+    local input_body
+    input_body="$(section_body "$file" "Input")"
+    if ! grep -qi 'example' <<<"$input_body"; then
+        echo "    WARN smoke: Input section has no example invocation"
+        smoke_warn=$((smoke_warn + 1))
+    fi
+    if ! grep -qiE 'empty-handed|nothing required|provide nothing|no input|with nothing|starting with nothing' <<<"$input_body"; then
+        echo "    WARN smoke: Input section never says the user can arrive with nothing (invitation, not gate)"
+        smoke_warn=$((smoke_warn + 1))
+    fi
 
     if [[ "$type" == "interactive" ]]; then
         local option_count question_count

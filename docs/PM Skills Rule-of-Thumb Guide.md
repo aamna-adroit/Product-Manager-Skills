@@ -50,7 +50,7 @@ Use **n8n** with this repo's scripts.
 
 ```text
 Use uploaded skill files as operating standards.
-Follow sections in order: Purpose, Key Concepts, Application, Examples, Common Pitfalls, References.
+Follow sections in order: Purpose, Input, Key Concepts, Application, Examples, Common Pitfalls, References.
 Ask up to 3 clarifying questions when context is missing.
 ```
 
