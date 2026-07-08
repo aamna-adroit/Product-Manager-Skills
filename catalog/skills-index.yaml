@@ -1,5 +1,5 @@
 generated_from: skills/*/SKILL.md
-count: 55
+count: 56
 skills:
 - name: acquisition-channel-advisor
   description: Evaluate acquisition channels using unit economics, customer quality,
@@ -233,6 +233,17 @@ skills:
     when you need a fast formula lookup, benchmark check, or decision framework reminder.
     For detailed explanations, calculations, and examples, see the related deep-dive
     skills.
+- name: incoming-request-advisor
+  description: Decode an incoming message into a structured breakdown that separates
+    the literal ask from the job-to-be-done. Use before replying to a loaded Slack
+    ping, email, mandate, or escalation.
+  type: interactive
+  path: skills/incoming-request-advisor/SKILL.md
+  intent: Act as a chief-of-staff-grade analyst that decodes an incoming message into
+    a structured breakdown, separating the literal ask from the job-to-be-done underneath
+    it, reading sender power and stake from a product leader's chair, and opening
+    the conversation toward a reply or next artifact. Trains the PM habit of finding
+    the outcome before responding.
 - name: jobs-to-be-done
   description: Uncover customer jobs, pains, and gains in a structured JTBD format.
     Use when clarifying unmet needs, repositioning a product, or improving discovery

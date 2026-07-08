@@ -89,6 +89,15 @@ Common downloads:
 
 ## 📣 Updates & Announcements
 
+### July 8, 2026 — v0.82 Inbound-Request Triage and a Browsable Download Shelf
+
+Two moves in one release: a new skill for the messages that land in your lap, and a much easier way to get the whole library.
+
+**What changed in v0.82:**
+- Added `incoming-request-advisor` (Interactive) — a chief-of-staff-grade read on any incoming message (Slack ping, email, mandate, escalation, FYI). It separates the literal ask from the job-to-be-done, reads sender power and stake, distinguishes success criteria from must-haves, and opens toward a reply. Ships with a copy/paste `template.md` and a worked example. Distilled from Dean's "Incoming Request Breakdown" prompt.
+- `dist/` is now a committed, browsable download shelf at [`/dist`](https://github.com/deanpeters/Product-Manager-Skills/tree/main/dist) — a plain-language README, a generated CATALOG of every skill, 56 individual upload-ready skill ZIPs, and a `packages/` folder of curated bundles. No terminal, no Releases tab. `README.md` and `CATALOG.md` are generated from `skills/` by `scripts/build-dist.sh`, so they never drift; the intermediate build dirs stay git-ignored.
+- Library is now **56 skills** (23 Component, 26 Interactive, 7 Workflow).
+
 ### July 4, 2026 — v0.81 Every Skill Now Declares Its Inputs (and Why We Don't Use `$ARGUMENTS`)
 
 This release closes a gap and names a differentiator in the same move. The gap: no skill told you what context to bring, or what would happen to context you supplied up front. The differentiator: other skill libraries close that gap with Claude Code's `$ARGUMENTS` templating — we deliberately don't, because the syntax only expands in Claude Code (it renders as literal noise in Claude Desktop/Web, Codex, and the Streamlit playground) and because a plain-language Input section teaches the human reader what a well-formed request looks like, which template syntax never will.
